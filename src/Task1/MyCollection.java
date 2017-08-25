@@ -1,12 +1,23 @@
 package Task1;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * @author Fominykh Vladimir
  */
  class MyCollection extends ArrayList<Integer> {
 
+    public MyCollection(int initialCapacity) {
+        super(initialCapacity);
+    }
+
+    public MyCollection() {
+    }
+
+    public MyCollection(Collection<? extends Integer> c) {
+        super(c);
+    }
 
     @Override
     public int indexOf(Object o) {
@@ -17,6 +28,13 @@ import java.util.ArrayList;
         return get(index);
     }
 
+
+    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param value element to be appended to this list
+     * @return <tt>true</tt> (as specified by {@link Collection#add})
+     */
     @Override
     public boolean add(Integer value) {
         for (int i = 0; i < size(); i++) {
