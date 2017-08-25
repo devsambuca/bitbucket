@@ -33,5 +33,25 @@ class Select {
 
     }
 
+    public boolean add(Integer value) {
+
+        if (value == size()){
+
+        }
+    }
+
+
+    public boolean remove(Integer value) {
+        for (int j = 0; j < size(); j++) {
+            set(j, get(j) - value);
+        }
+        return super.remove(value);
+    }
+
+        for (int i = 0; i < size(); i++) {
+            set(i, get(i) + value);
+        }
+        return super.add(value);
+
 
 }
