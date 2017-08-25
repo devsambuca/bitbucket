@@ -36,15 +36,16 @@ public class MyColT  extends ArrayList{
     }
 
     @Override
-    public boolean add(Object o) {
+    public boolean add(Object o){
+            if ((indexOf(o)) > valuecapacity) {
+                remove(0);
+                }
 
 
+            return super.add(o);
 
-
-        return super.add(o);
     }
 
-    @Override
     public Object remove(int index) {
         return super.remove(index);
     }
