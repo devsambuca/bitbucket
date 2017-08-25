@@ -10,9 +10,9 @@ public class MyColT  extends ArrayList{
     private static final int DEFAULT_CAPACITY = 16;
     private Object[] elementData= {};
     private static final Object[] EMPTY_ELEMENTDATA = {};
-    private int defaultCapacity;
+
     private int valuecapacity;
-    private int size;
+
 
     public MyColT() {
         this(DEFAULT_CAPACITY);
@@ -37,11 +37,9 @@ public class MyColT  extends ArrayList{
 
     @Override
     public boolean add(Object o){
-            if ((indexOf(o)) > valuecapacity) {
+            if (size() > elementData.length - 1 ) {
                 remove(0);
                 }
-
-
             return super.add(o);
 
     }

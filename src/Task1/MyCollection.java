@@ -37,10 +37,14 @@ import java.util.Collection;
      */
     @Override
     public boolean add(Integer value) {
-        for (int i = 0; i < size(); i++) {
-            set(i, get(i) + value);
+        if (value == null) throw new NullPointerException("Null pointer: " +
+                value);
+        else {
+            for (int i = 0; i < size(); i++) {
+                set(i, get(i) + value);
+            }
+            return super.add(value);
         }
-        return super.add(value);
     }
 
     public boolean remove(Integer value) {
