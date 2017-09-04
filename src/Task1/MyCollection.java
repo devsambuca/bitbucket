@@ -37,15 +37,27 @@ import java.util.Collection;
      */
     @Override
     public boolean add(Integer value) {
-        if (value == null) throw new NullPointerException("Null pointer: " +
-                value);
-        else {
-            for (int i = 0; i < size(); i++) {
-                set(i, get(i) + value);
+
+        try {
+            if (value == null){
+                throw new ParametrException("Invalid parametr! Insert correct value");
             }
-            return super.add(value);
+            else {
+                for (int i = 0; i < size(); i++) {
+                    set(i, get(i) + value);
+                }
+                return super.add(value);
         }
+
+        } catch (ParametrException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
     }
+
+
+
+
 
     public boolean remove(Integer value) {
         for (int j = 0; j < size(); j++) {

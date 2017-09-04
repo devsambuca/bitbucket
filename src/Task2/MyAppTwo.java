@@ -10,7 +10,8 @@ import static com.sun.xml.internal.fastinfoset.util.ValueArray.DEFAULT_CAPACITY;
  */
 public class MyAppTwo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidParamExeption {
+        MyColT mc1 = new MyColT(-6);
         MyColT mc2 = new MyColT();
 
         mc2.add(1);
@@ -22,7 +23,7 @@ public class MyAppTwo {
         mc2.add(7);
         mc2.add(8);
         mc2.add(9);
-        mc2.add(10);
+        mc2.add(-10);
         mc2.add(11);
         mc2.add(12);
         mc2.add(13);

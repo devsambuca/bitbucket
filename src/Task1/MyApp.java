@@ -7,7 +7,7 @@ public class MyApp {
     public static void main(String[] args) {
         MyCollection mc = new MyCollection();
         MyCollection mc2 = new MyCollection(12);
-     //   mc2.add(null);
+        mc2.add(null);
         mc2.add(1);
         System.out.println(mc2);
         mc2.add(1);

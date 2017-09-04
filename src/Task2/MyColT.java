@@ -14,19 +14,23 @@ public class MyColT  extends ArrayList{
     private int valuecapacity;
 
 
-    public MyColT() {
+    public MyColT() throws InvalidParamExeption {
         this(DEFAULT_CAPACITY);
     }
 
-    public MyColT(int valuecapacity) {
+    public MyColT(int valuecapacity) throws InvalidParamExeption {
         if (valuecapacity > 0) {
             this.elementData = new Object[valuecapacity];
 
         } else if (valuecapacity == 0) {
             this.elementData = EMPTY_ELEMENTDATA;
         } else {
-            throw new IllegalArgumentException("Illegal Capacity: "+
-                    valuecapacity);
+            try {
+                throw new InvalidParamExeption("Illegal Capacity: "+
+                        valuecapacity);
+            } catch (InvalidParamExeption invalidParamExeption) {
+                invalidParamExeption.printStackTrace();
+            }
         }
     }
 
