@@ -29,7 +29,7 @@ public class MyColT  extends ArrayList{
                 throw new InvalidParamExeption("Illegal Capacity: "+
                         valuecapacity);
             } catch (InvalidParamExeption invalidParamExeption) {
-                invalidParamExeption.printStackTrace();
+                invalidParamExeption.myOwnException();
             }
         }
     }
